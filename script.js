@@ -180,33 +180,4 @@
       setLoading(false);
     }
   }
-
-  // Mobile: sticky CTA until registration form is in view
-  const sticky = document.getElementById("mobile-sticky-cta");
-  const registerPanel = document.getElementById("register");
-  if (sticky && registerPanel && "IntersectionObserver" in window) {
-    sticky.hidden = false;
-    const mq = window.matchMedia("(max-width: 980px)");
-    const observer = new IntersectionObserver(
-      function (entries) {
-        const entry = entries[0];
-        const show = mq.matches && !entry.isIntersecting;
-        sticky.classList.toggle("is-visible", show);
-      },
-      { threshold: 0.18, rootMargin: "0px 0px -10% 0px" }
-    );
-
-    function syncSticky() {
-      if (mq.matches) {
-        observer.observe(registerPanel);
-      } else {
-        observer.disconnect();
-        sticky.classList.remove("is-visible");
-      }
-    }
-
-    syncSticky();
-    if (mq.addEventListener) mq.addEventListener("change", syncSticky);
-    else if (mq.addListener) mq.addListener(syncSticky);
-  }
 })();

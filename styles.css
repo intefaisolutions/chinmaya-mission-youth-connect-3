@@ -446,8 +446,8 @@ body {
 }
 
 .mobile-jump-cta,
-.mobile-sticky-cta,
-.header-register-cta {
+.header-register-cta,
+.mobile-top-cta {
   display: none;
 }
 
@@ -690,6 +690,51 @@ body {
     padding: 1.35rem 1.2rem 1.4rem;
   }
 
+  .mobile-top-cta {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.65rem 0.85rem calc(0.65rem);
+    padding-top: calc(0.65rem + env(safe-area-inset-top));
+    background: rgba(18, 10, 6, 0.96);
+    border-bottom: 2px solid #ff9a4a;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12px);
+  }
+
+  .mobile-top-cta-label {
+    color: #fff8f0;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+
+  .mobile-top-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 0.7rem 1rem;
+    border-radius: 999px;
+    background: #ff7a1a;
+    color: #fff !important;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    box-shadow:
+      0 0 0 3px rgba(255, 176, 103, 0.45),
+      0 8px 18px rgba(228, 87, 10, 0.55);
+  }
+
   .brand-row {
     gap: 0.65rem;
   }
@@ -705,19 +750,18 @@ body {
     justify-content: center;
     flex-shrink: 0;
     margin-left: auto;
-    padding: 0.65rem 0.9rem;
+    padding: 0.7rem 1rem;
     border-radius: 999px;
     background: #ff7a1a;
-    color: #fff;
-    font-size: 0.78rem;
+    color: #fff !important;
+    font-size: 0.8rem;
     font-weight: 800;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    text-decoration: none;
+    text-decoration: none !important;
     box-shadow:
       0 0 0 3px rgba(255, 176, 103, 0.45),
       0 8px 20px rgba(228, 87, 10, 0.55);
-    animation: cta-pulse 1.8s ease-in-out infinite;
   }
 
   .mobile-jump-cta {
@@ -729,85 +773,30 @@ body {
     padding: 0.95rem 1rem;
     border-radius: 12px;
     background: #ff7a1a;
-    color: #fff;
+    color: #fff !important;
     font-size: 0.95rem;
     font-weight: 800;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    text-decoration: none;
+    text-decoration: none !important;
     box-shadow:
       0 0 0 4px rgba(255, 176, 103, 0.35),
       0 12px 28px rgba(228, 87, 10, 0.5);
   }
 
-  .mobile-sticky-cta {
-    display: block;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 50;
-    padding: 0.75rem 0.85rem calc(0.75rem + env(safe-area-inset-bottom));
-    background: rgba(12, 8, 5, 0.96);
-    backdrop-filter: blur(12px);
-    border-top: 2px solid #ff9a4a;
-    box-shadow: 0 -12px 36px rgba(0, 0, 0, 0.4);
-    transform: translateY(110%);
-    transition: transform 0.25s ease;
-  }
-
-  .mobile-sticky-cta.is-visible {
-    transform: translateY(0);
-  }
-
-  .mobile-sticky-cta a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 1rem 1rem;
-    border-radius: 12px;
-    background: #ff7a1a;
-    color: #fff;
-    font-size: 0.92rem;
-    font-weight: 800;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    text-decoration: none;
-    box-shadow:
-      0 0 0 3px rgba(255, 176, 103, 0.4),
-      0 10px 24px rgba(228, 87, 10, 0.45);
-  }
-
   .page {
-    padding-bottom: 5.5rem;
-  }
-
-  .site-credit {
-    margin-bottom: 0.25rem;
+    padding-top: 4.25rem;
+    padding-bottom: 1rem;
   }
 
   .form-panel {
-    scroll-margin-top: 0.75rem;
-  }
-}
-
-@keyframes cta-pulse {
-  0%, 100% {
-    box-shadow:
-      0 0 0 3px rgba(255, 176, 103, 0.45),
-      0 8px 20px rgba(228, 87, 10, 0.55);
-  }
-  50% {
-    box-shadow:
-      0 0 0 6px rgba(255, 176, 103, 0.25),
-      0 10px 26px rgba(228, 87, 10, 0.65);
+    scroll-margin-top: 4.5rem;
   }
 }
 
 @media (max-width: 560px) {
   .page {
-    padding: 0.65rem;
+    padding: 4.25rem 0.65rem 0.65rem;
   }
 
   .hero {
