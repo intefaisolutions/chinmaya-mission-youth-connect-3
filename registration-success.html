@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Complete Payment | Youth Connect 3.0</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .success-wrap {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 1.5rem;
+    }
+    .success-card {
+      width: min(560px, 100%);
+      background: #fff;
+      border: 1px solid rgba(107, 30, 30, 0.12);
+      border-radius: 16px;
+      padding: 1.75rem 1.4rem 1.5rem;
+      box-shadow: 0 24px 60px rgba(26, 31, 24, 0.09);
+      animation: rise 0.7s ease both;
+      text-align: center;
+    }
+    .success-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.85rem;
+      margin-bottom: 0.85rem;
+    }
+    .success-logos img:first-child {
+      width: 40px;
+      height: auto;
+    }
+    .success-logos img:last-child {
+      width: 72px;
+      height: auto;
+    }
+    .success-card h1 {
+      margin: 0 0 0.45rem;
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.85rem;
+      color: #6b1d1d;
+    }
+    .success-card > p {
+      margin: 0 0 0.65rem;
+      color: #4d433a;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+    .success-card .ok {
+      color: #6b1d1d;
+      font-weight: 700;
+    }
+    .pay-box {
+      margin: 1rem 0;
+      padding: 1rem;
+      border: 1px solid rgba(228, 87, 10, 0.25);
+      border-radius: 14px;
+      background: linear-gradient(180deg, #fff8f1 0%, #fff 100%);
+      text-align: left;
+    }
+    .pay-box h2 {
+      margin: 0 0 0.35rem;
+      text-align: center;
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.35rem;
+      color: #c2410c;
+    }
+    .pay-amount {
+      margin: 0 0 0.85rem;
+      text-align: center;
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #6b1d1d;
+    }
+    .qr-wrap {
+      display: flex;
+      justify-content: center;
+      margin: 0 0 0.85rem;
+    }
+    .qr-wrap img {
+      width: min(220px, 70%);
+      height: auto;
+      border-radius: 10px;
+      border: 1px solid rgba(107, 29, 29, 0.12);
+      background: #fff;
+    }
+    .upi-id {
+      margin: 0 0 0.85rem;
+      text-align: center;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #1b1410;
+      word-break: break-all;
+    }
+    .upi-id button {
+      margin-left: 0.35rem;
+      border: 0;
+      border-radius: 6px;
+      padding: 0.2rem 0.5rem;
+      background: rgba(228, 87, 10, 0.12);
+      color: #c2410c;
+      font: inherit;
+      font-size: 0.75rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .bank-details {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 0.4rem;
+      font-size: 0.84rem;
+      color: #4d433a;
+    }
+    .bank-details li {
+      display: grid;
+      grid-template-columns: 7.5rem 1fr;
+      gap: 0.35rem;
+      line-height: 1.35;
+    }
+    .bank-details strong {
+      color: #6b1d1d;
+      font-weight: 800;
+    }
+    .pay-note {
+      margin: 0.85rem 0 0 !important;
+      text-align: center;
+      font-size: 0.82rem !important;
+      color: #4d433a;
+    }
+    .wa-btn {
+      display: inline-block;
+      margin-top: 0.85rem;
+      padding: 0.75rem 1.1rem;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #e4570a, #c2410c 55%, #6b1d1d);
+      color: #fff !important;
+      font-weight: 800;
+      text-decoration: none !important;
+      letter-spacing: 0.02em;
+    }
+    .home-link {
+      display: inline-block;
+      margin-top: 0.85rem;
+      color: #c2410c;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .home-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <main class="success-wrap">
+    <div class="success-card">
+      <div class="success-logos">
+        <img src="assets/chinmaya-om.png?v=2" alt="Chinmaya Mission Om" />
+        <img src="assets/chinmaya-mission-logo.png?v=2" alt="Chinmaya Mission" />
+      </div>
+      <h1>Registration received</h1>
+      <p class="ok" id="status">Payment pending — ₹1,100</p>
+      <p id="greeting"></p>
+      <p>
+        Free 7-day residential camp<br />
+        <strong>27 Sept – 3 Oct 2026 · Tatva Bodh</strong>
+      </p>
+
+      <section class="pay-box" aria-label="Payment details">
+        <h2>Complete your payment</h2>
+        <p class="pay-amount">
+          Pay ₹1,100 (refundable after course completion)
+        </p>
+
+        <div class="qr-wrap">
+          <img
+            src="assets/upi-qr-chinmaya.png"
+            alt="UPI QR code for Chinmaya Seva Trust Indore"
+          />
+        </div>
+
+        <p class="upi-id">
+          UPI:
+          <span id="upi-text">9300317878m@pnb</span>
+          <button type="button" id="copy-upi">Copy</button>
+        </p>
+
+        <ul class="bank-details">
+          <li>
+            <strong>A/c name</strong>
+            <span>Chinmaya Seva Trust</span>
+          </li>
+          <li>
+            <strong>A/c no</strong>
+            <span>4622000100008735</span>
+          </li>
+          <li>
+            <strong>IFSC</strong>
+            <span>PUNB0462200</span>
+          </li>
+          <li>
+            <strong>Bank</strong>
+            <span>Punjab National Bank</span>
+          </li>
+          <li>
+            <strong>Branch</strong>
+            <span>Vijay Nagar</span>
+          </li>
+        </ul>
+
+        <p class="pay-note">
+          After payment, WhatsApp your name + UTR / screenshot to
+          <strong>7880009441</strong> for confirmation.
+        </p>
+      </section>
+
+      <a
+        class="wa-btn"
+        id="wa-link"
+        href="https://wa.me/917880009441?text=Namaste%2C%20I%20have%20registered%20for%20Youth%20Connect%203.0%20and%20paid%20%E2%82%B91100.%20Sharing%20payment%20proof."
+        target="_blank"
+        rel="noopener"
+      >
+        WhatsApp payment proof
+      </a>
+      <br />
+      <a class="home-link" href="index.html">Back to home</a>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      try {
+        const raw = sessionStorage.getItem("youth_connect_lead");
+        if (raw) {
+          const lead = JSON.parse(raw);
+          const name = [lead.firstName, lead.lastName].filter(Boolean).join(" ").trim();
+          const el = document.getElementById("greeting");
+          if (el && name) el.textContent = "Thank you, " + name + ".";
+          const wa = document.getElementById("wa-link");
+          if (wa && name) {
+            wa.href =
+              "https://wa.me/917880009441?text=" +
+              encodeURIComponent(
+                "Namaste, I am " +
+                  name +
+                  ". I have registered for Youth Connect 3.0 and paid ₹1100. Sharing payment proof."
+              );
+          }
+        }
+      } catch (err) {}
+
+      const btn = document.getElementById("copy-upi");
+      if (btn) {
+        btn.addEventListener("click", function () {
+          const text = document.getElementById("upi-text").textContent.trim();
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(function () {
+              btn.textContent = "Copied";
+              setTimeout(function () {
+                btn.textContent = "Copy";
+              }, 1500);
+            });
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
