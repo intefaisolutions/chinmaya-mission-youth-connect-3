@@ -438,6 +438,12 @@ body {
   overflow-y: auto;
   animation: fade-in 0.8s ease 0.12s both;
   scrollbar-width: thin;
+  scroll-margin-top: 1rem;
+}
+
+.mobile-jump-cta,
+.mobile-sticky-cta {
+  display: none;
 }
 
 .form-head {
@@ -677,6 +683,73 @@ body {
   .hero-copy {
     max-width: none;
     padding: 1.35rem 1.2rem 1.4rem;
+  }
+
+  .mobile-jump-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.55rem;
+    width: 100%;
+    max-width: 320px;
+    padding: 0.85rem 1rem;
+    border-radius: 12px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 10px 24px rgba(194, 65, 12, 0.35);
+  }
+
+  .mobile-sticky-cta {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    padding: 0.7rem 0.85rem calc(0.7rem + env(safe-area-inset-bottom));
+    background: rgba(20, 12, 8, 0.92);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 180, 120, 0.25);
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.28);
+    transform: translateY(110%);
+    transition: transform 0.25s ease;
+  }
+
+  .mobile-sticky-cta.is-visible {
+    transform: translateY(0);
+  }
+
+  .mobile-sticky-cta a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border-radius: 12px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.88rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .page {
+    padding-bottom: 5.5rem;
+  }
+
+  .site-credit {
+    margin-bottom: 0.25rem;
+  }
+
+  .form-panel {
+    scroll-margin-top: 0.75rem;
   }
 }
 
