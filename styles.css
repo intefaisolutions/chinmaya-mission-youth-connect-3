@@ -248,7 +248,7 @@ body {
 
 .gurudev-credit {
   margin: 0;
-  max-width: 28ch;
+  max-width: 36ch;
   font-family: var(--display);
   font-size: 0.92rem;
   font-style: italic;
@@ -256,6 +256,89 @@ body {
   line-height: 1.35;
   color: rgba(255, 210, 160, 0.9);
   animation: fade-up 0.7s ease 0.12s both;
+}
+
+.subcopy {
+  margin: 0.15rem 0 0;
+  max-width: 38ch;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  font-weight: 500;
+  color: rgba(255, 246, 235, 0.88);
+  animation: fade-up 0.7s ease 0.16s both;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffb067;
+  animation: fade-up 0.7s ease 0.04s both;
+}
+
+.portrait-role {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.72rem;
+  color: rgba(255, 210, 160, 0.88);
+  font-weight: 600;
+}
+
+.section-label {
+  margin: 0 0 0.15rem;
+  font-family: var(--display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffd5a8;
+}
+
+.qr-register-block {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 0.75rem;
+  align-items: center;
+  margin: 0.2rem 0 0;
+  padding: 0.75rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 220, 180, 0.25);
+  background: rgba(255, 250, 244, 0.12);
+  backdrop-filter: blur(6px);
+}
+
+.qr-register-block img {
+  width: 110px;
+  height: auto;
+  border-radius: 8px;
+  background: #fff;
+  display: block;
+}
+
+.qr-title {
+  margin: 0 0 0.3rem;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #fffaf4;
+}
+
+.qr-copy {
+  margin: 0 0 0.4rem;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: rgba(255, 246, 235, 0.88);
+}
+
+.qr-inline-cta {
+  color: #ffb067;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.qr-inline-cta:hover {
+  text-decoration: underline;
+  color: #fffaf4;
 }
 
 .subcopy {
@@ -791,6 +874,15 @@ body {
 
   .form-panel {
     scroll-margin-top: 4.5rem;
+  }
+}
+
+  .qr-register-block {
+    grid-template-columns: 96px 1fr;
+  }
+
+  .qr-register-block img {
+    width: 96px;
   }
 }
 

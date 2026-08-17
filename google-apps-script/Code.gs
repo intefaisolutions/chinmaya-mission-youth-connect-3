@@ -17,7 +17,7 @@
  */
 
 const SHEET_NAME = "Registrations";
-const EVENT_NAME = "Youth Connect 3.0";
+const EVENT_NAME = "Chinmay Doot Youth Camp";
 const DEFAULT_AMOUNT = "1100";
 
 const HEADERS = [
@@ -53,7 +53,7 @@ function doGet() {
   return json_({
     ok: true,
     version: "youth-connect-v1",
-    message: "Youth Connect 3.0 registration endpoint.",
+    message: "Chinmay Doot Youth Camp registration endpoint.",
     event: EVENT_NAME,
   });
 }
@@ -80,8 +80,8 @@ function handleRegistration_(data) {
   }
 
   const ageNum = Number(age);
-  if (!Number.isInteger(ageNum) || ageNum < 18 || ageNum > 32) {
-    return json_({ success: false, error: "Age must be between 18 and 32." });
+  if (!Number.isInteger(ageNum) || ageNum < 18 || ageNum > 30) {
+    return json_({ success: false, error: "Age must be between 18 and 30." });
   }
 
   const consent =
@@ -108,7 +108,7 @@ function handleRegistration_(data) {
     data.eventName || data.event || EVENT_NAME,
     String(data.amount || DEFAULT_AMOUNT),
     "Registered — Payment Pending",
-    data.source || "Youth Connect Landing Page",
+    data.source || "Chinmay Doot Landing Page",
   ]);
 
   return json_({

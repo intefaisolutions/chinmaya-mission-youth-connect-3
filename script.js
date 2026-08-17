@@ -41,7 +41,7 @@
     submitBtn.disabled = loading;
     submitBtn.textContent = loading
       ? "Submitting…"
-      : "Register for Youth Connect 3.0";
+      : "Register for Chinmay Doot Youth Camp";
   }
 
   function persistForm() {
@@ -92,7 +92,7 @@
 
   function validateAge(ageValue) {
     const age = Number(ageValue);
-    return Number.isInteger(age) && age >= 18 && age <= 32;
+    return Number.isInteger(age) && age >= 18 && age <= 30;
   }
 
   function normalizeWhatsapp(value) {
@@ -140,7 +140,7 @@
     const data = Object.fromEntries(new FormData(form).entries());
 
     if (!validateAge(data.age)) {
-      setStatus("Age must be between 18 and 32 years.", true);
+      setStatus("Age must be between 18 and 30 years.", true);
       return;
     }
 
@@ -161,9 +161,9 @@
       ...data,
       whatsapp: whatsapp,
       consent: true,
-      eventName: cfg().EVENT_NAME || "Youth Connect 3.0",
+      eventName: cfg().EVENT_NAME || "Chinmay Doot Youth Camp",
       amount: "1100",
-      source: "Youth Connect Landing Page",
+      source: "Chinmay Doot Landing Page",
       submittedAt: new Date().toISOString(),
     };
 
