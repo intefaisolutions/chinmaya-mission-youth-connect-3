@@ -171,6 +171,16 @@
     setStatus("Saving your registration…");
 
     try {
+      if (typeof fbq === "function") {
+        fbq("track", "Lead", {
+          content_name: "Chinmay Doot Youth Camp",
+          value: 1100.0,
+          currency: "INR",
+        });
+      }
+    } catch (err) {}
+
+    try {
       await saveRegistration(payload);
       const successUrl = cfg().SUCCESS_URL || "registration-success.html";
       window.location.href = successUrl;
