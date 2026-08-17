@@ -170,8 +170,69 @@ body {
   animation: fade-up 0.7s ease both;
 }
 
-.header-register-cta {
-  display: none;
+.lang-toggle {
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 200, 140, 0.55);
+  background: rgba(255, 250, 244, 0.12);
+  color: #fffaf4;
+  border-radius: 999px;
+  padding: 0.45rem 0.7rem;
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.lang-toggle:hover {
+  background: rgba(255, 122, 26, 0.35);
+  border-color: #ff9a4a;
+}
+
+.lang-toggle-header {
+  margin-left: auto;
+}
+
+.mobile-top-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.closing-line {
+  margin: 0.15rem 0 0;
+  max-width: 40ch;
+  font-family: var(--display);
+  font-size: 0.95rem;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.45;
+  color: rgba(255, 220, 170, 0.95);
+}
+
+.form-lang-hint {
+  margin: 0.45rem 0 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+body.lang-hi .hero-copy,
+body.lang-hi .mobile-top-cta-label,
+body.lang-hi .closing-line {
+  font-family: "Noto Sans Devanagari", var(--font);
+}
+
+body.lang-hi .brand-title,
+body.lang-hi .section-label,
+body.lang-hi .gurudev-credit {
+  font-family: "Noto Sans Devanagari", var(--display);
+}
+
+body.lang-hi .brand-title {
+  font-size: clamp(2rem, 3.8vw, 2.85rem);
+  line-height: 1.15;
 }
 
 .logo-mission {
@@ -832,7 +893,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    margin-left: auto;
+    margin-left: 0;
     padding: 0.7rem 1rem;
     border-radius: 999px;
     background: #ff7a1a;
@@ -845,6 +906,10 @@ body {
     box-shadow:
       0 0 0 3px rgba(255, 176, 103, 0.45),
       0 8px 20px rgba(228, 87, 10, 0.55);
+  }
+
+  .lang-toggle-header {
+    margin-left: auto;
   }
 
   .mobile-jump-cta {

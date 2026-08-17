@@ -11,15 +11,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="styles.css?v=9" />
+  <link rel="stylesheet" href="styles.css?v=10" />
 </head>
 <body>
   <div class="mobile-top-cta" id="mobile-top-cta">
-    <span class="mobile-top-cta-label">Chinmay Doot · Free Camp</span>
-    <a class="mobile-top-cta-btn" href="#register">Register Now</a>
+    <span class="mobile-top-cta-label" data-i18n="mobileTopLabel">Chinmay Doot · Free Camp</span>
+    <div class="mobile-top-actions">
+      <button type="button" class="lang-toggle" id="lang-toggle-mobile" aria-label="Change language">
+        हिं
+      </button>
+      <a class="mobile-top-cta-btn" href="#register" data-i18n="registerShort">Register Now</a>
+    </div>
   </div>
 
   <main class="page">
@@ -52,48 +57,51 @@
                   width="44"
                   height="56"
                 />
-                <p class="org-label">Chinmaya Mission, Indore</p>
+                <p class="org-label" data-i18n="orgLabel">Chinmaya Mission, Indore</p>
               </div>
-              <a class="header-register-cta" href="#register">Register</a>
+              <button type="button" class="lang-toggle lang-toggle-header" id="lang-toggle" aria-label="Change language">
+                हिं
+              </button>
+              <a class="header-register-cta" href="#register" data-i18n="registerBtn">Register</a>
             </header>
 
-            <p class="eyebrow">Learn Advaita Vedanta in Guru Parampara Ashram</p>
-            <h1 class="brand-title">Chinmay Doot Youth Camp</h1>
-            <p class="headline">
+            <p class="eyebrow" data-i18n="eyebrow">Learn Advaita Vedanta in Guru Parampara Ashram</p>
+            <h1 class="brand-title" data-i18n="brandTitle">Chinmay Doot Youth Camp</h1>
+            <p class="headline" data-i18n-html="headline">
               Free 5-day residential camp —
               <span class="accent">Advaita Vedanta</span>
             </p>
-            <p class="gurudev-credit">
+            <p class="gurudev-credit" data-i18n="credit">
               Once in a lifetime opportunity to stay in the presence of a Guru
               and learn profound Vedanta
             </p>
 
-            <p class="subcopy">
+            <p class="subcopy" data-i18n="subcopy">
               Transformative 5 days for your own self — to discover your True
               Self through Vedantic wisdom and sadhana at Chinmaya Sharanam
               Ashram.
             </p>
 
-            <a class="mobile-jump-cta" href="#register">
+            <a class="mobile-jump-cta" href="#register" data-i18n="jumpCta">
               Register free · Last date 15 Sept
             </a>
 
             <dl class="event-meta">
               <div>
-                <dt>When</dt>
-                <dd>28 Sept – 2 Oct 2026</dd>
+                <dt data-i18n="metaWhen">When</dt>
+                <dd data-i18n="metaWhenVal">28 Sept – 2 Oct 2026</dd>
               </div>
               <div>
-                <dt>For</dt>
-                <dd>Ages 18–30</dd>
+                <dt data-i18n="metaFor">For</dt>
+                <dd data-i18n="metaForVal">Ages 18–30</dd>
               </div>
               <div>
-                <dt>Venue</dt>
-                <dd>Chinmaya Sharanam Ashram</dd>
+                <dt data-i18n="metaVenue">Venue</dt>
+                <dd data-i18n="metaVenueVal">Chinmaya Sharanam Ashram</dd>
               </div>
               <div>
-                <dt>Camp</dt>
-                <dd>Completely free</dd>
+                <dt data-i18n="metaCamp">Camp</dt>
+                <dd data-i18n="metaCampVal">Completely free</dd>
               </div>
             </dl>
           </div>
@@ -106,33 +114,33 @@
               height="200"
             />
             <figcaption>
-              <strong>In the presence of</strong>
-              Swami Prabuddhananda Saraswati
-              <span class="portrait-role">Acharya and Vedanta Scholar</span>
+              <strong data-i18n="presence">In the presence of</strong>
+              <span data-i18n="swamijiName">Swami Prabuddhananda Saraswati</span>
+              <span class="portrait-role" data-i18n="swamijiRole">Acharya and Vedanta Scholar</span>
             </figcaption>
           </figure>
 
           <div class="copy-bottom">
-            <h3 class="section-label">What you will get</h3>
+            <h3 class="section-label" data-i18n="whatYouGet">What you will get</h3>
             <ul class="reasons">
-              <li>
+              <li data-i18n="reason1">
                 Learn Tatva Bodh, Yoga &amp; Meditation, chanting Suktam and
                 Stotras, Havan and Puja, cultural evenings, group discussions
                 and games
               </li>
-              <li>Get to know yourself and gain clarity for life</li>
-              <li>
+              <li data-i18n="reason2">Get to know yourself and gain clarity for life</li>
+              <li data-i18n="reason3">
                 Journey of Self-Realisation with Vedantic wisdom and sadhana
               </li>
-              <li>Secret of happiness and peace</li>
-              <li>
+              <li data-i18n="reason4">Secret of happiness and peace</li>
+              <li data-i18n="reason5">
                 Transformative 5 days in a positive atmosphere with sattvic
                 living
               </li>
-              <li>Q&amp;A sessions with Swami Prabuddhananda Saraswati Ji</li>
+              <li data-i18n="reason6">Q&amp;A sessions with Swami Prabuddhananda Saraswati Ji</li>
             </ul>
 
-            <p class="fee-note">
+            <p class="fee-note" data-i18n-html="feeNote">
               <strong>Camp is free.</strong>
               A refundable amount of <strong>₹1,100</strong> is collected at
               registration and fully returned after successful completion of the
@@ -140,19 +148,23 @@
               Last date: <strong>15 September 2026</strong>.
             </p>
 
+            <p class="closing-line" data-i18n="closing">
+              Take 5 days for yourself — know yourself, understand yourself, and
+              begin the journey toward your True Self.
+            </p>
+
             <div class="contact-block">
               <p>
-                <strong>Enquiries:</strong>
+                <strong data-i18n="enquiries">Enquiries:</strong>
                 <a href="tel:+917880009441">7880009441</a>
               </p>
               <p>
-                <strong>Enquiries (Hariom Pandey):</strong>
+                <strong data-i18n="enquiriesHariom">Enquiries (Hariom Pandey):</strong>
                 <a href="tel:+919792930649">9792930649</a>
               </p>
               <p>
-                <strong>Venue:</strong>
-                Chinmaya Sharanam Ashram, Scheme No. 78, Slice 2, Sector-B,
-                Vijay Nagar, Indore, Madhya Pradesh 452010
+                <strong data-i18n="venueLabel">Venue:</strong>
+                <span data-i18n="venueFull">Chinmaya Sharanam Ashram, Scheme No. 78, Slice 2, Sector-B, Vijay Nagar, Indore, Madhya Pradesh 452010</span>
               </p>
             </div>
           </div>
@@ -168,6 +180,9 @@
           <p class="form-event-meta">28 Sept – 2 Oct 2026 · Ages 18–30</p>
           <p class="form-fee-note">
             Free camp · ₹1,100 refundable after course
+          </p>
+          <p class="form-lang-hint" data-i18n="formHint">
+            Form stays in English for accurate registration.
           </p>
         </div>
 
@@ -307,7 +322,8 @@
     </p>
   </main>
 
-  <script src="config.js?v=7"></script>
-  <script src="script.js?v=7" defer></script>
+  <script src="config.js?v=8"></script>
+  <script src="i18n.js?v=1"></script>
+  <script src="script.js?v=8" defer></script>
 </body>
 </html>
